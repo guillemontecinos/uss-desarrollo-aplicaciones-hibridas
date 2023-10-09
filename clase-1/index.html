@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1</title>
+    <style>
+        body{
+            margin: 3px;
+        }
+        .app{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+            height: 100vh;
+        }
+        .app .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            border-radius: 60px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="sub-container-1" style="background-color: #A1CCD1;"></div>
+            <div class="sub-container-2" style="background-color: #F4F2DE;"></div>
+            <div class="sub-container-3" style="background-color: #E9B384;">
+                <button style="width: 100%; height: 100%;">NO ME PRESIONES</button>
+            </div>
+            <div class="sub-container-4" style="background-color: #7C9D96;">
+                <input type="text" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+        <div class="container" style="background-color: #B71375;"></div>
+        <div class="container" style="background-color: #FC4F00;"></div>
+        <div class="container" style="background-color: #F79540; display: block;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSukK-StmAKMr-c9S4RdgduOQUuqEFkfF1nSnKPYFgnHizdMCZLu41sZFqiiYNfrLts8EQ&usqp=CAU">
+        </div>
+    </div>
+</body>
+
+</html>
