@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const products = [
+            'Toallas',
+            'Manteles',
+            'Cortinas'
+        ]
+        function Header(props){
+            return(
+                <header>
+                    <h1>Bordados personalizados {props.name}</h1>
+                </header>
+            )
+        }
+        function Content(props){
+            return(
+                <div>
+                    <p>Personalizamos:</p>
+                    <ul>
+                        {props.products.map(product => (
+                            <li>{product}</li>
+                        ))}
+                    </ul>
+                    <p>Copyright {props.year}</p>
+                </div>
+            )
+        }
+        function App(){
+            return(
+                <div>
+                    <Header name="El Imperio"/>
+                    <Content year={2022} products={products}/>
+                </div>
+            )
+        }
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        )    
+    </script>
+</body>
+
+</html>
