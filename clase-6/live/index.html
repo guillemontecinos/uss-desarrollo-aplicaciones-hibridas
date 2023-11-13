@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const products = [
+            'Toallas',
+            'Manteles',
+            'Sabanas',
+            'Cubrecamas',
+            'Almohadones'
+        ]
+        function Header(props){
+            return(
+                <header>
+                    <h1>El taller de {props.name}</h1>
+                </header>
+            )
+        }
+        function Content(){
+            return(
+                <div>
+                    <p>Customizamos los siguientes productos:</p>
+                    <ul>
+                        {products.map(product => (<li>{product}</li>))}
+                    </ul>
+                </div>
+            )
+        }
+        function Foto(){
+            return(
+                <img height='200' src='https://theawesomer.com/photos/2015/11/towell_8.jpg'/>
+            )
+        }
+        function App(){
+            return(
+                <div>
+                    <Header name='Josefina'/>
+                    <Content />
+                    <Foto />
+                </div>
+            )
+        }
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        )    
+    </script>
+</body>
+
+</html>
